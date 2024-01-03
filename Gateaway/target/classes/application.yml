@@ -1,0 +1,44 @@
+server:
+  port: 9991
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
+
+
+
+
+
+
+spring:
+  application:
+    name: Gateway
+  cloud:
+    gateway:
+      routes:
+        - id: download-service
+          uri: lb://download-service
+          predicates:
+            - Path=/download/**
+        - id: get-service
+          uri: lb://get-service
+          predicates:
+            - Path=/get-service/**
+        - id: upload-service
+          uri: lb://upload-service
+          predicates:
+            - Path=/upload/**
+        - id: delete-service
+          uri: lb://delete-service
+          predicates:
+            - Path=/delete/**
+        - id: getall-service
+          uri: lb://getall-service
+          predicates:
+            - Path=/getallfiles
+
+
