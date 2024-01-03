@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ahmad.upload.UploadServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.424 s - in com.ahmad.upload.UploadServiceApplicationTests
